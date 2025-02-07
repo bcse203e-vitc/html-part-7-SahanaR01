@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Largest Number</title>
+</head>
+<body>
+    <h2>Second Largest Number</h2>
+    <script>
+        function secondLargest(arr) {
+            let uniqueArr = [...new Set(arr)].sort((a, b) => b - a);  // Remove duplicates and sort descending
+            return uniqueArr.length > 1 ? uniqueArr[1] : "No second largest number";  // Check if second largest exists
+        }
+
+        // Example usage
+        console.log(secondLargest([10, 20, 4, 45, 99, 99]));  // Expected output: 45
+    </script>
+</body>
+</html>

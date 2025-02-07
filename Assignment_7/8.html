@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Without Sort</title>
+</head>
+<body>
+    <h2>Sort an Array Without Using `sort()`</h2>
+    <script>
+        function bubbleSort(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];  // Swap elements
+                }
+            }
+            return arr;
+        }
+
+        // Example usage
+        console.log(bubbleSort([5, 2, 9, 1, 5, 6]));  // Expected output: [1, 2, 5, 5, 6, 9]
+    </script>
+</body>
+</html>

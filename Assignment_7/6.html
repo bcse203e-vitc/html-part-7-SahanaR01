@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Duplicates</title>
+</head>
+<body>
+    <h2>Find Duplicates</h2>
+    <script>
+        function findDuplicates(arr) {
+            let counts = {};
+            let duplicates = [];
+            for (let num of arr) {
+                counts[num] = (counts[num] || 0) + 1;
+                if (counts[num] === 2) duplicates.push(num);
+            }
+            return duplicates;
+        }
+
+        // Example usage
+        console.log(findDuplicates([1, 2, 3, 2, 4, 5, 1]));  // Expected output: [2, 1]
+    </script>
+</body>
+</html>
